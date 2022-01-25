@@ -9,6 +9,7 @@
 	<body>
 		<div id="title"></div>
 		<script>
+			console.log(navigator.userAgent);
 			// window.location = 'tlmaster://trilucmaster.vn?';
 			// setTimeout(function () {
 			// 	try {
@@ -19,7 +20,7 @@
 			// }, 2000);
 
 			const fallBackToStore = () => {
-        document.getElementById('title').innerText = 'google play'
+				document.getElementById('title').innerText = 'google play';
 				window.location.replace(
 					'https://play.google.com/store/apps/details?id=com.mobileplus.trilucmaster'
 				);
@@ -31,10 +32,10 @@
 
 			function triggerAppOpen() {
 				openApp();
-				setTimeout(fallBackToStore, 1000);
+				// setTimeout(fallBackToStore, 1000);
 			}
 
-			triggerAppOpen();
+			// triggerAppOpen();
 		</script>
 	</body>
 </html>
