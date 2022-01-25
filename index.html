@@ -7,6 +7,7 @@
 		<title>Deeplink</title>
 	</head>
 	<body>
+		<div id="title"></div>
 		<script>
 			// window.location = 'tlmaster://trilucmaster.vn?';
 			// setTimeout(function () {
@@ -18,13 +19,14 @@
 			// }, 2000);
 
 			const fallBackToStore = () => {
+        document.getElementById('title').innerText = 'google play'
 				window.location.replace(
-					'https://play.google.com/store/apps/details?id=vn.trilucmaster.app&hl=vi'
+					'https://play.google.com/store/apps/details?id=com.mobileplus.trilucmaster'
 				);
 			};
 
 			const openApp = () => {
-				window.location.replace = 'tlmaster://trilucmaster.vn?';
+				window.location.replace('tlmaster://trilucmaster.vn?');
 			};
 
 			function triggerAppOpen() {
